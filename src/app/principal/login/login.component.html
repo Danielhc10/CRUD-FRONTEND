@@ -1,0 +1,22 @@
+<div class="login-one">
+    <form class="login-one-form">
+        <div class="col">
+            <div class="login-one-ico">
+                <img src="assets/iconos/login.svg" width="150px">
+            </div>
+            <div class="form-group mb-3">
+                <div>
+                    <h3 id="heading" class="text-center">Iniciar Sesión</h3>
+                </div>
+                <form novalidate (ngSubmit)="onSubmit()">
+                    <input class="form-control" type="text" placeholder="Usuario" formControlName="usuario">
+                    <p></p>
+                    <input class="form-control" type="password" placeholder="Contraseña" formControlName="password">
+                    <p></p>
+                    <button class="btn btn-primary" style="background-color:#007ac9;" type="submit">Iniciar</button>
+                </form>
+            </div>
+        </div>
+    </form>  
+</div>
+

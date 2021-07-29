@@ -1,0 +1,25 @@
+<div id="login-one" class="login-one">
+    <form class="login-one-form">
+      <div class="col">
+        <div class="login-one-ico">
+          <img src="assets/iconos/note.svg" width="70px">
+        </div>
+        <div class="form-group mb-3">
+          <div>
+            <h3 id="heading" class="text-center">Registrarse</h3>
+          </div>
+          <form (ngSubmit)="onSubmit()">
+            <input class="form-control" type="text" placeholder="Usuario" formControlName="usuario">
+            <p></p>
+            <input class="form-control" type="email" placeholder="Correo" formControlName="email">
+            <p></p>
+            <input class="form-control" type="password" placeholder="Contraseña" formControlName="password">
+            <p></p>
+            <input class="form-control" type="password" placeholder="Confirma contraseña">
+            <p></p>
+            <button class="btn btn-primary" type="submit" style="background-color:#007ac9;">Registrar</button>
+          </form>
+        </div>
+      </div>
+    </form>
+  </div>
