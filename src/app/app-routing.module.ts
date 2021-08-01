@@ -21,6 +21,9 @@ const routes: Routes = [
     },
     {
       path: 'create', component: CreateProductComponent
+    },
+    {
+      path: 'edit', component: CreateProductComponent
     }
   ]
   },

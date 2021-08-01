@@ -1,3 +1,50 @@
-<h1 class="text-center ">
-    CREA UN NUEVO PRODUCTO
-</h1>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="login-one-ico">
+                        <img src="assets/iconos/maquillaje.svg" alt="" width="100px">
+                    </div>
+                    <span class="title"><strong>Agrega un nuevo producto</strong></span>
+                    <form class="mt-3" [formGroup]="productoForm"(ngSubmit)="onSubmit()">
+                        <div class="mb-3">
+                            <label class="form-label">Nombre del producto</label>
+                            <input type="text" class="form-control" formControlName="producto" placeholder="Producto">
+                            <div class="text-danger" *ngIf= "productoForm.get('producto')?.hasError('required') && productoForm.get('presentacion')?.touched">
+                                Por favor da un nombre al maquillaje 💄
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Categoría</label>
+                            <input type="text" class="form-control" formControlName="categoria" placeholder="Categoría">
+                            <div class="text-danger" *ngIf= "productoForm.get('categoria')?.hasError('required')">
+                                Necesito la gategoría 🙌
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Presentación</label>
+                            <input type="text" class="form-control" formControlName="presentacion" placeholder="Presentación">
+                            <div class="text-danger" *ngIf= "productoForm.get('presentacion')?.hasError('required')">
+                                Es necesaria la presentación 😊
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Precio del producto</label>
+                            <input type="number" class="form-control" formControlName="precio" placeholder="Precio">
+                            <div class="text-danger" *ngIf= "productoForm.get('precio')?.hasError('required')">
+                                ¡Vamos, ponle un precio! 💰
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <button class="button btn btn-danger float-start" [routerLink]="['/producto/list']" >Cancelar</button>
+                        </div>
+                        <div class="mt-3">
+                            <button type="submit" class="button btn btn-success float-end">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

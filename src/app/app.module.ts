@@ -11,6 +11,7 @@ import { RegisterComponent } from './principal/register/register.component';
 import { LoginComponent } from './principal/login/login.component';
 import { ListProductComponent } from './productos/list-product/list-product.component';
 import { CreateProductComponent } from './productos/create-product/create-product.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -29,7 +30,8 @@ import { CreateProductComponent } from './productos/create-product/create-produc
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
