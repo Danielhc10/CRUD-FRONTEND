@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+//Componentes
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './principal/home/home.component';
@@ -11,7 +15,7 @@ import { RegisterComponent } from './principal/register/register.component';
 import { LoginComponent } from './principal/login/login.component';
 import { ListProductComponent } from './productos/list-product/list-product.component';
 import { CreateProductComponent } from './productos/create-product/create-product.component';
-import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -31,7 +35,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

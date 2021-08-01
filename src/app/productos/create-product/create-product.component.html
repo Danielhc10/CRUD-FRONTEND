@@ -10,29 +10,29 @@
                     <form class="mt-3" [formGroup]="productoForm"(ngSubmit)="onSubmit()">
                         <div class="mb-3">
                             <label class="form-label">Nombre del producto</label>
-                            <input type="text" class="form-control" formControlName="producto" placeholder="Producto">
-                            <div class="text-danger" *ngIf= "productoForm.get('producto')?.hasError('required') && productoForm.get('presentacion')?.touched">
+                            <input type="text" class="form-control" formControlName="nombre" placeholder="Producto">
+                            <div class="text-danger" *ngIf= "productoForm.get('nombre')?.hasError('required') && productoForm.get('nombre')?.touched">
                                 Por favor da un nombre al maquillaje 💄
                             </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Categoría</label>
                             <input type="text" class="form-control" formControlName="categoria" placeholder="Categoría">
-                            <div class="text-danger" *ngIf= "productoForm.get('categoria')?.hasError('required')">
+                            <div class="text-danger" *ngIf= "productoForm.get('categoria')?.hasError('required') && productoForm.get('categoria')?.touched">
                                 Necesito la gategoría 🙌
                             </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Presentación</label>
                             <input type="text" class="form-control" formControlName="presentacion" placeholder="Presentación">
-                            <div class="text-danger" *ngIf= "productoForm.get('presentacion')?.hasError('required')">
+                            <div class="text-danger" *ngIf= "productoForm.get('presentacion')?.hasError('required') && productoForm.get('presentacion')?.touched">
                                 Es necesaria la presentación 😊
                             </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Precio del producto</label>
                             <input type="number" class="form-control" formControlName="precio" placeholder="Precio">
-                            <div class="text-danger" *ngIf= "productoForm.get('precio')?.hasError('required')">
+                            <div class="text-danger" *ngIf= "productoForm.get('precio')?.hasError('required') && productoForm.get('precio')?.touched">
                                 ¡Vamos, ponle un precio! 💰
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                             <button class="button btn btn-danger float-start" [routerLink]="['/producto/list']" >Cancelar</button>
                         </div>
                         <div class="mt-3">
-                            <button type="submit" class="button btn btn-success float-end">Guardar</button>
+                            <button type="submit" [disabled]="productoForm.invalid" class="button btn btn-success float-end">Guardar</button>
                         </div>
                     </form>
                 </div>
