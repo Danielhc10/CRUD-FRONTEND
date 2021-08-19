@@ -32,7 +32,7 @@ export class CreateProductComponent implements OnInit {
 
    const PRODUCTO: Producto = {
     nombre: this.productoForm.get('nombre')?.value,
-    presentacion:  this.productoForm.get('presentacion')?.value,
+    presentacion: this.productoForm.get('presentacion')?.value,
     categoria: this.productoForm.get('categoria')?.value,
     precio: this.productoForm.get('precio')?.value
    }

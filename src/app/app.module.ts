@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from "@angular/common/http";
 
 //Componentes
 import { FooterComponent } from './footer/footer.component';
@@ -15,6 +16,7 @@ import { RegisterComponent } from './principal/register/register.component';
 import { LoginComponent } from './principal/login/login.component';
 import { ListProductComponent } from './productos/list-product/list-product.component';
 import { CreateProductComponent } from './productos/create-product/create-product.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 
 
@@ -29,7 +31,8 @@ import { CreateProductComponent } from './productos/create-product/create-produc
     RegisterComponent,
     LoginComponent,
     ListProductComponent,
-    CreateProductComponent
+    CreateProductComponent,
+    ScrollToTopComponent
 
   ],
   imports: [
